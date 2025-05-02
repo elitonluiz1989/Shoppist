@@ -1,5 +1,4 @@
-﻿using Shoppist.Domain.Products.Entities;
-using Shoppist.Domain.Products.Interfaces;
+﻿using Shoppist.Domain.Products.Shared;
 using Shoppist.Persistence.Contexts;
 
 namespace Shoppist.Persistence.Repositories;

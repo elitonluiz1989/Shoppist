@@ -1,6 +1,5 @@
 ﻿using Shoppist.Domain.Base.Interfaces;
-using Shoppist.Domain.Products.Entities;
 
-namespace Shoppist.Domain.Products.Interfaces;
+namespace Shoppist.Domain.Products.Shared;
 
 public interface IProductRepository : IRepository<Product> { }
