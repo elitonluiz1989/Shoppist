@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppist.Domain", "Shoppist.Domain\Shoppist.Domain.csproj", "{6E3E82F3-7385-404B-871E-F629F9AEBF33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppist.Persistence", "Shoppist.Persistence\Shoppist.Persistence.csproj", "{7DAA3FF1-F771-4973-90F9-78ACF52505A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6E3E82F3-7385-404B-871E-F629F9AEBF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3E82F3-7385-404B-871E-F629F9AEBF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E3E82F3-7385-404B-871E-F629F9AEBF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DAA3FF1-F771-4973-90F9-78ACF52505A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DAA3FF1-F771-4973-90F9-78ACF52505A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DAA3FF1-F771-4973-90F9-78ACF52505A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DAA3FF1-F771-4973-90F9-78ACF52505A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
