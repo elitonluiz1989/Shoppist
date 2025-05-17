@@ -1,0 +1,11 @@
+﻿@if (!string.IsNullOrWhiteSpace(Icon)) {
+    <span class="@IconClass"></span>
+}
+
+@code {
+    [Parameter]
+    public string Icon { get; set; } = string.Empty;
+
+    private bool IsValidIcon => !string.IsNullOrWhiteSpace(Icon);
+    private string IconClass => IsValidIcon ? $"oi oi-{Icon}" : string.Empty;
+}

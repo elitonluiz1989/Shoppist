@@ -15,4 +15,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Shoppist.Domain\Shoppist.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Items\Components\Card\ItemCard.razor" />
+    <AdditionalFiles Include="Items\Components\Card\Section\ItemCardSection.razor" />
+  </ItemGroup>
+
 </Project>

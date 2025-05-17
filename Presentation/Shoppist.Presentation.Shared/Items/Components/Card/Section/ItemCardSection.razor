@@ -1,0 +1,24 @@
+﻿@namespace Shoppist.Presentation.Shared.Items.Components
+<div class="@CssClass" @attributes="FilteredAttributes">
+    <span class="item-card-section-title">@Title</span>
+
+    <span>@Content</span>
+</div>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+    [Parameter]
+    public string Content { get; set; } = string.Empty;
+
+    private string CssClass => AdditionalAttributes.ContainsKey("class")
+        ? $"item-card-section {AdditionalAttributes["class"]}"
+        : "item-card-section";
+
+    private IReadOnlyDictionary<string, object> FilteredAttributes =>
+        AdditionalAttributes
+            .Where(kvp => kvp.Key != "class")
+            .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+}

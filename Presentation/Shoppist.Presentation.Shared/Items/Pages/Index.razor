@@ -1,0 +1,32 @@
+﻿@page "/Items"
+@using Shoppist.Domain.Products.Shared
+@using Shoppist.Presentation.Shared.Core.Components
+@using Shoppist.Presentation.Shared.Items.Components
+
+<AppTitle Title="Items">
+    <AppButton StyleType="AppButtonStyleType.BtnPrimary" Text="Add Item" OnClick="@ToAddItem" />
+</AppTitle>
+
+<div class="row justify-content-center">
+    @foreach (var item in _items)
+    {
+        <div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
+            <div class="d-flex flex-row align-items-center">
+                <ItemCard Item="@item" />
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Inject]
+    private NavigationManager Navigation { get; set; } = default!;
+
+    private readonly List<Item> _items =
+    [
+        new() { Name = "Item 1" },
+        new() { Name = "Item 2" }
+    ];
+
+    private Task ToAddItem() => Task.Run(() => Navigation.NavigateTo("/Items/Add"));
+}

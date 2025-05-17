@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using Shoppist.Domain.Products.Shared
+@using Shoppist.Presentation.Shared.Core.Components
+
+<EditForm FormName="ItemForm" Model="Item" @onsubmit:preventDefault>
+    <div class="form-group">
+        <label class="col-12 col-form-label">Name</label>
+
+        <div class="col-12">
+            <InputText class="form-control" @bind-Value="Item.Name" maxlength="10" />
+        </div>
+    </div>
+
+    <div class="form-group d-flex justify-content-between mt-3">
+        <AppButton StyleType="AppButtonStyleType.BtnOutlineSecondary" Text="Back" @onclick="Back" />
+
+        <AppButton Type="AppButtonType.Reset" StyleType="AppButtonStyleType.BtnOutlineSecondary" Text="Reset" @onclick="Reset" />
+
+        <AppButton Type="AppButtonType.Submit" StyleType="AppButtonStyleType.BtnSuccess" Text="Save" @onclick="Save" />
+    </div>
+</EditForm>
+
+@code {
+    [SupplyParameterFromForm]
+    private Item Item { get; set; } = new Item();
+
+    private static void Back() => Console.WriteLine("Back");
+
+    private static void Reset() => Console.WriteLine("Back");
+
+    private static void Save() => Console.WriteLine("Back");
+}

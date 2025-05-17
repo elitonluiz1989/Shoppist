@@ -1,0 +1,17 @@
+﻿<div class="d-flex mb-5">
+    <h3 class="flex-fill">@Title</h3>
+
+    @if (ChildContent is not null)
+    {
+        <div>
+            @ChildContent
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = null!;
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

@@ -1,0 +1,9 @@
+﻿.item-card-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.item-card-section-title {
+    font-weight: bold;
+}

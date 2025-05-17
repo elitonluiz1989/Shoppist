@@ -1,0 +1,17 @@
+﻿@namespace Shoppist.Presentation.Shared.Items.Components
+@using Shoppist.Domain.Products.Shared
+
+<div class="card d-flex flex-row flex-fill align-items-center p-3">
+    <ItemCardSection Title="Name" Content="@Item.Name" class="flex-fill" />
+
+    <div class="d-flex align-items-center justify-content-center">
+        <AppButton Icon="pencil" class="btn" />
+
+        <AppButton Icon="trash" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Item Item { get; set; } = null!;
+}

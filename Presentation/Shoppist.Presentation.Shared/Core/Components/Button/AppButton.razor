@@ -1,0 +1,38 @@
+﻿@namespace Shoppist.Presentation.Shared.Core.Components
+@using Shoppist.Presentation.Shared.Core.Components;
+
+<button class="@CssClasses" type="@ButtonType" @attributes="AdditionalAttributes" @onclick="TriggerOnClick">
+    @if (HasIcon) {
+        <AppIcon Icon="@Icon" />
+    }
+
+    @Text
+</button>
+
+@code {
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = [];
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+    [Parameter]
+    public string Icon { get; set; } = string.Empty;
+    [Parameter]
+    public AppButtonType Type { get; set; } = AppButtonType.Button;
+    [Parameter]
+    public AppButtonStyleType StyleType { get; set; } = AppButtonStyleType.Btn;
+    [Parameter]
+    public AppButtonSize? Size { get; set; }
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+
+    private bool HasIcon => !string.IsNullOrWhiteSpace(Icon);
+    private string ButtonType => Type.GetName();
+    private string CssClasses => Size is not null ? $"{StyleType.GetCssClasses()} {Size.Value.GetCssClasses()}" : StyleType.GetCssClasses();
+
+    private async Task TriggerOnClick() {
+        if (!OnClick.HasDelegate)
+            return;
+
+        await OnClick.InvokeAsync();
+    }
+}
