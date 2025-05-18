@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppist.Web", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppist.Presentation.Shared", "Presentation\Shoppist.Presentation.Shared\Shoppist.Presentation.Shared.csproj", "{5F33487F-5B1A-4A3F-B269-154EEB708876}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoppist.Api", "Shoppist.Api\Shoppist.Api.csproj", "{18234D13-E24D-4381-8275-15D1FF44ED86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{5F33487F-5B1A-4A3F-B269-154EEB708876}.Release|x64.Build.0 = Release|Any CPU
 		{5F33487F-5B1A-4A3F-B269-154EEB708876}.Release|x86.ActiveCfg = Release|Any CPU
 		{5F33487F-5B1A-4A3F-B269-154EEB708876}.Release|x86.Build.0 = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|x64.Build.0 = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Debug|x86.Build.0 = Debug|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|x64.ActiveCfg = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|x64.Build.0 = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|x86.ActiveCfg = Release|Any CPU
+		{18234D13-E24D-4381-8275-15D1FF44ED86}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,5 +96,6 @@ Global
 		{7DAA3FF1-F771-4973-90F9-78ACF52505A8} = {65B58D69-138B-4569-9C09-4A21E16EE490}
 		{EDEE4493-FEB9-4FE3-A432-F540DB8FBCB7} = {06CFFD70-14AA-A959-A3BA-1B15D094E3B1}
 		{5F33487F-5B1A-4A3F-B269-154EEB708876} = {06CFFD70-14AA-A959-A3BA-1B15D094E3B1}
+		{18234D13-E24D-4381-8275-15D1FF44ED86} = {06CFFD70-14AA-A959-A3BA-1B15D094E3B1}
 	EndGlobalSection
 EndGlobal

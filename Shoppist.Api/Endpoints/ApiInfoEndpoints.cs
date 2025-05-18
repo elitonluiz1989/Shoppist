@@ -1,0 +1,22 @@
+﻿using System.Reflection;
+
+namespace Shoppist.Api.Endpoints;
+
+public static class ApiInfoEndpoints
+{
+    public static void Map(this IEndpointRouteBuilder app)
+    {
+        app.MapGet("/", GetApiInfo).Produces(200).ProducesProblem(500);
+        app.MapGet("/info", GetApiInfo).Produces(200).ProducesProblem(500);
+    }
+
+    private static IResult GetApiInfo()
+    {
+        var apiInfo = new
+        {
+            Assembly.GetExecutingAssembly().GetName().Version,
+            CurrentDateTime = DateTime.Now
+        };
+        return Results.Ok(apiInfo);
+    }
+}

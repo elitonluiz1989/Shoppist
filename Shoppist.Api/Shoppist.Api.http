@@ -1,0 +1,6 @@
+@Shoppist.Api_HostAddress = http://localhost:7223
+
+GET {{Shoppist.Api_HostAddress}}/
+Accept: application/json
+
+###
