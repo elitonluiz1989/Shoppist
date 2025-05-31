@@ -1,9 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shoppist.Domain.Products.Shared;
+using Shoppist.Domain.Items.Shared;
 
 namespace Shoppist.Persistence.Contexts;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext : DbContext
 {
-    public DbSet<Item> Items { get; set; }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public DbSet<Item> Items { get; set; } = null!;
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+        base.OnModelCreating(modelBuilder);
+    }
 }

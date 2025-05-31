@@ -1,4 +1,4 @@
-﻿using Shoppist.Domain.Products.Shared;
+﻿using Shoppist.Domain.Items.Shared;
 using Shoppist.Persistence.Contexts;
 
 namespace Shoppist.Persistence.Repositories;

@@ -2,9 +2,9 @@
 
 namespace Shoppist.Api.Endpoints;
 
-public static class ApiInfoEndpoints
+public static class InfoEndpoints
 {
-    public static void Map(this IEndpointRouteBuilder app)
+    public static void MapInfoEndpoints(this IEndpointRouteBuilder app)
     {
         app.MapGet("/", GetApiInfo).Produces(200).ProducesProblem(500);
         app.MapGet("/info", GetApiInfo).Produces(200).ProducesProblem(500);

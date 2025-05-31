@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shoppist.Domain.Base.Entities;
-using Shoppist.Domain.Base.Interfaces;
-using Shoppist.Domain.Base.Request;
 using Shoppist.Persistence.Contexts;
 using System.Linq.Expressions;
+using Shoppist.Domain.Shared.Entities;
+using Shoppist.Domain.Shared.Interfaces;
+using Shoppist.Domain.Shared.Request;
 
 namespace Shoppist.Persistence.Repositories
 {
@@ -14,7 +14,7 @@ namespace Shoppist.Persistence.Repositories
             return await GetDbSet().ToListAsync(cancellationToken);
         }
 
-        public async Task<IEnumerable<TProjection>> GetAllAsync<TProjection>(GetAllRequest<TEntity, TProjection> request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<TProjection>> GetAllAsync<TProjection>(GetAllQuery<TEntity, TProjection> request, CancellationToken cancellationToken)
             where TProjection : notnull
         {
             IQueryable<TEntity> query = GetDbSet();
@@ -59,7 +59,7 @@ namespace Shoppist.Persistence.Repositories
             GetDbSet().Remove(entity);
         }
 
-        protected DbSet<TEntity> GetDbSet()
+        private DbSet<TEntity> GetDbSet()
         {
             return context.Set<TEntity>();
         }

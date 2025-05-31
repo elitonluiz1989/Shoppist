@@ -1,4 +1,4 @@
-﻿using Shoppist.Domain.Base.Interfaces;
+﻿using Shoppist.Domain.Shared.Interfaces;
 using Shoppist.Persistence.Contexts;
 
 namespace Shoppist.Persistence;
