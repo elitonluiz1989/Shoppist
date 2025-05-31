@@ -1,6 +1,6 @@
 ﻿using System.Collections.Immutable;
 
-namespace Shoppist.Domain.Base.Results;
+namespace Shoppist.Domain.Shared.Results;
 
 public abstract class BaseResult<TResult>(ImmutableArray<ErrorResult> errors)
     where TResult : BaseResult<TResult>

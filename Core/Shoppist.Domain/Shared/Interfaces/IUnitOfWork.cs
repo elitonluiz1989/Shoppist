@@ -1,4 +1,4 @@
-﻿namespace Shoppist.Domain.Base.Interfaces;
+﻿namespace Shoppist.Domain.Shared.Interfaces;
 
 public interface IUnitOfWork
 {

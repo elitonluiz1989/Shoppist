@@ -1,13 +1,13 @@
-﻿using Shoppist.Domain.Base.Entities;
-using Shoppist.Domain.Base.Request;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using Shoppist.Domain.Shared.Entities;
+using Shoppist.Domain.Shared.Request;
 
-namespace Shoppist.Domain.Base.Interfaces;
+namespace Shoppist.Domain.Shared.Interfaces;
 
 public interface IRepository<TEntity> where TEntity : Entity
 {
     Task<List<TEntity>> GetAllAsync(CancellationToken cancellationToken);
-    Task<IEnumerable<TProjection>> GetAllAsync<TProjection>(GetAllRequest<TEntity, TProjection> request, CancellationToken cancellationToken) where TProjection : notnull;
+    Task<IEnumerable<TProjection>> GetAllAsync<TProjection>(GetAllQuery<TEntity, TProjection> query, CancellationToken cancellationToken) where TProjection : notnull;
     Task<TEntity?> GetAsync(Guid Id, CancellationToken cancellationToken);
     Task<TProjection?> GetAsync<TProjection>(Guid Id, Expression<Func<TEntity, TProjection>> Projection, CancellationToken cancellationToken) where TProjection : notnull;
     void Create(TEntity entity);

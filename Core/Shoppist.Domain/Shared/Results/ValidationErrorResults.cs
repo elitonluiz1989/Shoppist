@@ -1,4 +1,4 @@
-﻿namespace Shoppist.Domain.Base.Results;
+﻿namespace Shoppist.Domain.Shared.Results;
 
 public static class ValidationErrorResults
 {

@@ -1,4 +1,4 @@
-﻿namespace Shoppist.Domain.Base.Entities;
+﻿namespace Shoppist.Domain.Shared.Entities;
 
 public abstract class Entity
 {

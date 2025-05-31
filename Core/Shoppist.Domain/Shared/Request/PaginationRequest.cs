@@ -1,6 +1,6 @@
-﻿namespace Shoppist.Domain.Base.Request;
+﻿namespace Shoppist.Domain.Shared.Request;
 
-public record PaginationRequest
+public abstract record PaginationRequest
 {
     public int Page { get; set; }
     public int Size { get; set; }

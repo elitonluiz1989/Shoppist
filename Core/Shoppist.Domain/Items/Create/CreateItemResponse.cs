@@ -1,6 +1,6 @@
-﻿namespace Shoppist.Domain.Products.Create;
+﻿namespace Shoppist.Domain.Items.Create;
 
-public record AddItemResponse(
+public record CreateItemResponse(
     Guid Id,
     string Name,
     DateTimeOffset CreatedAt,
